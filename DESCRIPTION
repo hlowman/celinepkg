@@ -1,13 +1,13 @@
 Package: celinepkg
-Title: What the Package Does (One Line, Title Case)
+Title: Works Through R Package Textbook
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Heili",
+           family = "Lowman",
            role = c("aut", "cre"),
            email = "first.last@example.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: This package works through the various examples of the "R Packages" textbook 2nd version by Hadley Wickham and Jennifer Bryan. The coding portion of this package began in earnest in Chapter 2 and continues through the end of the book.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
 Encoding: UTF-8
