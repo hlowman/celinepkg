@@ -1,0 +1,108 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# celinepkg
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of celinepkg is to work through the various examples of the "R Packages" textbook 2nd version by Hadley Wickham and Jennifer Bryan. The coding portion of this package began in earnest in Chapter 2 and continues through the end of the book.
+
+The first function in this package is fbind().
+
+The second function in this package is fcount().
+
+## Installation
+
+You can install the released version of celinepkg from [CRAN](https://CRAN.R-project.org) with:
+
+```{r installation}
+devtools::install_github("hlowman/celinepkg")
+## installs package
+```
+
+## Examples
+
+```{r attach}
+library(celinepkg)
+```
+
+
+This is a basic example of the first function fbind():
+
+```{r example1}
+fbind(iris$Species[c(1, 51, 101)], PlantGrowth$group[c(1, 11, 21)])
+## binds two factors
+```
+
+This is a basic example of the second function fcount():
+
+```{r example2}
+fcount(iris$Species)
+## makes a sorted frequency table for a factor
+```
+
+Here is what Jenny wrote:
+
+Binding two factors via `fbind()`:
+
+```{r}
+a <- factor(c("character", "hits", "your", "eyeballs"))
+b <- factor(c("but", "integer", "where it", "counts"))
+```
+
+Simply catenating two factors leads to a result that most don't expect.
+
+```{r}
+c(a, b)
+```
+
+The `fbind()` function glues two factors together and returns factor.
+
+```{r}
+fbind(a, b)
+```
+
+Often we want a table of frequencies for the levels of a factor. The base `table()` function returns an object of class `table`, which can be inconvenient for downstream work.
+
+```{r}
+set.seed(1234)
+x <- factor(sample(letters[1:5], size = 100, replace = TRUE))
+table(x)
+```
+
+The `fcount()` function returns a frequency table as a tibble with a column of factor levels and another of frequencies:
+
+```{r}
+fcount(x)
+```
+
+Everything below comes standard in the auto-generated Rmd file:
+
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+
+```{r cars}
+summary(cars)
+```
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+
+You can also embed plots, for example:
+
+```{r pressure, echo = FALSE}
+plot(pressure)
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
