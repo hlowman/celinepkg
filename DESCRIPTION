@@ -8,8 +8,7 @@ Authors@R:
            email = "first.last@example.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: This package works through the various examples of the "R Packages" textbook 2nd version by Hadley Wickham and Jennifer Bryan. The coding portion of this package began in earnest in Chapter 2 and continues through the end of the book.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
