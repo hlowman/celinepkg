@@ -1,0 +1,111 @@
+---
+title: "my-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3 
+
+-----
+
+This is a test vignette to demonstrate the purpose/use of our package.
+
+*****
+
+* Bulleted list
+* Item 2
+    * Nested bullet need a 4-space indent.
+    * Item 2b.
+    
+* It's possible to put multiple paragraphs of text in a list item.
+
+    But to do that, the second and subsequent paragraphs must be
+    indented by four or more spaces. It looks better if the first 
+    bullet is also indented.
+    
+1. Item 1
+1. Item 2
+1. Items are numbered automatically, even though they all start with 1.
+
+1. Item 1.
+    * Item a
+    * Item b
+1. Item 2.
+
+Definition
+    : a statement of the exact meaning of a word, especially in a dictionary.
+List
+    : a number of connected items or names written or printed consecutively, typically one below the other.
+    : barriers enclosing an area for a jousting tournament.
+    
+_italic_ or *italic*
+
+__bold__ or **bold**
+
+[link text] (destination)
+
+[my website] (https://www.heililowman.com)
+
+<http://this-is-a-raw-url.com>
+
+pipe table:
+
+| Right | Left | Default | Center |
+|------:|:-----|---------|:------:|
+|   12  |  12  |    12   |    12  |
+|  123  |  123 |   123   |   123  |
+|    1  |    1 |     1   |     1  |
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(celinepkg)
+```
+
+```
+# A comment
+add <- function(a, b) a + b
+```
+
+```c
+int add(int a, int b) {
+return a + b;
+}
+```
+
+```{r code}
+
+# Add two numbers together
+add <- function(a, b) a + b
+add(10, 20)
+
+```
+
+Some additional options in the {r} heading:
+
+eval = FALSE prevents evaluation of the code
+
+echo = FALSE does not print the code input
+
+results = "hide" does not print the code output.
+
+warning = FALSE and message = FALSE suppress displays of warnings and messages.
+
+error = TRUE captures errors and shows them inline
+
+fig.show = "hold" puts all figures at the end of the code block.
+
+fig.width = 5 and fig.height = 5 set the width and height of figures (in inches).
+
